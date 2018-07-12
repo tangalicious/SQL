@@ -1,0 +1,17 @@
+
+/*************************************************
+Name: Revising the Select Query 2
+Author: Chris Tang
+Created: 7/11/2018
+Description: Select Query practice
+
+Note:
+
+**************************************************
+BEGIN
+  SELECT CONCAT 
+    (ID, ", ", CITY, ", ", STATE) AS NameCityState 
+  FROM
+    STATION;
+END
+  

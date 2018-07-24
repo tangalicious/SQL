@@ -1,0 +1,15 @@
+/*************************************************
+Name: African Cities
+Author: Chris Tang
+Created: 7/11/2018
+Description: Basic Join//Hackerrank
+
+Note:
+
+**************************************************/
+
+SELECT CITY.Name 
+    FROM CITY
+JOIN COUNTRY
+ON (COUNTRY.CODE = CITY.Countrycode)
+WHERE COUNTRY.CONTINENT = "AFRICA";

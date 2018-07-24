@@ -1,0 +1,23 @@
+/*************************************************
+Name: The Report
+Author: Chris Tang
+Created: 7/24/2018
+Description: Basic join//Hackerrank
+
+Note: Multiple answers exist
+
+**************************************************
+
+SELECT Name, Grades.Grade, Marks FROM STUDENTS 
+INNER JOIN Grades
+    ON STUDENTS.Marks 
+    BETWEEN GRADES.Min_Mark AND Max_Mark
+WHERE Grades.Grade > 7 
+  ORDER BY Grades.Grade DESC, Students.Name ASC;
+
+SELECT null, Grades.Grade, Marks FROM Students
+INNER JOIN Grades
+    ON Students.Marks
+    BETWEEN Grades.Min_Mark AND Max_Mark
+WHERE Grades.Grade <= 7 
+    ORDER BY Grades.Grade DESC, Students.Marks ASC;

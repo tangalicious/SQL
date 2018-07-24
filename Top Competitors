@@ -1,0 +1,24 @@
+
+/*************************************************
+Name: Competitors
+Author: Chris Tang
+Created: 7/24/2018
+Description: Basic join//Hackerrank
+
+Note: Multiple answers exist
+
+**************************************************/
+
+SELECT Hackers.hacker_id, Hackers.name
+FROM Hackers
+INNER JOIN Submissions
+    ON (Submissions.hacker_id = Hackers.hacker_id)
+INNER JOIN Challenges
+    ON (Submissions.challenge_id = Challenges.challenge_id)
+INNER JOIN Difficulty
+    ON (Challenges.difficulty_level = Difficulty.difficulty_level)
+WHERE Submissions.score = Difficulty.score
+    GROUP BY Hackers.hacker_id, Hackers.name
+        HAVING COUNT(*) > 1
+ORDER BY COUNT (*) DESC, Hackers.hacker_id;
+

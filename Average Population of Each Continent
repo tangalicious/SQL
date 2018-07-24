@@ -1,0 +1,15 @@
+/*************************************************
+Name: Average Population of Each Continent
+Author: Chris Tang
+Created: 7/11/2018
+Description: Basic Join//Hackerrank
+
+Note:
+
+**************************************************
+
+SELECT COUNTRY.Continent, AVG(CITY.Population)
+FROM CITY
+JOIN COUNTRY
+    ON (Country.Code = City.CountryCode)
+GROUP BY Country.Continent;
